@@ -1,0 +1,151 @@
+$primary-color: #4c4e61;
+$secondary-color: #a3a5ae;
+$super-color: #45d3d3;
+$team-color: #ea5353;
+$karma-color: #fcaf4a;
+$calc-color: #549ef2;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+
+    .main {
+        text-align: center;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 200;
+            color: $primary-color;
+
+            &:first-of-type {
+                margin-top: 20px;
+            }
+
+            &:nth-of-type(2) {
+                margin-bottom: 20px;
+                font-weight: 700;
+            }
+        }
+
+        p {
+            color: $secondary-color;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px;
+            width: 500px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            width: 1000px;
+            height: auto;
+            margin: auto;
+            gap:20px;
+
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+                width: fit-content;               
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+
+            div {
+                width: 300px;
+                height: 225px;
+                box-shadow: 0px 0px 10px 5px hsl(229deg 6% 66% / 20%);
+                position: relative;
+                border-radius: 5px;
+                text-align: left;
+                padding-left: 40px;
+                padding-top: 25px;    
+
+                h3 {
+                    font-size: 1.17rem;
+                    line-height: 1.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0cap;
+
+                }
+
+                p {
+                    width: 100%;
+                    padding-right: 25px;
+                    font-size: smaller;
+                    padding-top: 15px;
+                }
+
+                img {
+                    position: absolute;
+                    right: 30px;
+                    bottom: 30px;
+                    width: 50px;
+                }
+            }
+
+            .super {
+                border-top: 4px solid $super-color;
+                grid-area: 2/1/span 2/1;
+
+                @media (max-width: 1024px) {
+                    grid-area: auto;
+                }
+
+                @media (max-width: 768px) {
+                    grid-area: auto;
+                }
+            }
+
+            .team {
+                border-top: 4px solid $team-color;
+                grid-area: 1/2/span 2/2;
+
+                @media (max-width: 1024px) {
+                    grid-area: auto;
+                }
+
+                @media (max-width: 768px) {
+                    grid-area: auto;
+                }
+            }
+
+            .karma {
+                border-top: 4px solid $karma-color;
+                grid-area: 3/2/span 3/2;
+
+                @media (max-width: 1024px) {
+                    grid-area: auto;
+                }
+
+                @media (max-width: 768px) {
+                    grid-area: auto;
+                }
+            }
+
+            .calculator {
+                border-top: 4px solid $calc-color;
+                grid-area: 2/3/span 2/3;
+
+                @media (max-width: 1024px) {
+                    grid-area: auto;
+                }
+
+                @media (max-width: 768px) {
+                    grid-area: auto;
+                }
+            }
+        }
+    }
+}
